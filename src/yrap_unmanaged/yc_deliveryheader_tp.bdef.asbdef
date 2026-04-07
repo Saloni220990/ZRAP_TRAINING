@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+
+define behavior for YC_DELIVERYHEADER_TP alias DelHead
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _item { create; }
+}
+
+define behavior for YC_DELIVERYLINE alias DelLine
+{
+  use update;
+  use delete;
+
+  use association _header;
+}

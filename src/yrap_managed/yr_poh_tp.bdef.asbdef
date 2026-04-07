@@ -1,0 +1,28 @@
+managed implementation in class zbp_r_poh_tp unique;
+strict ( 2 );
+
+define behavior for YR_POH_TP alias poh
+persistent table yyekko
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly:update ) Ebeln;
+  association _poitem { create; }
+}
+
+define behavior for YI_POI alias poi
+persistent table yyekpo
+lock dependent by _poheader
+authorization dependent by _poheader
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Ebeln;
+  field ( readonly:update ) Ebelp ;
+  association _poheader;
+}
