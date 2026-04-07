@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZLCC_YYMARA01LC'
+@MappingRole: true
+define role ZLCC_YYMARA01LC {
+  grant select on ZLCC_YYMARA01LC
+  where INHERITING CONDITIONS FROM ENTITY ZLCR_YYMARA01LC REPLACING { ROOT WITH _BaseEntity };
+}

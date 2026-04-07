@@ -1,0 +1,5 @@
+@EndUserText.label: 'Manage Delivery'
+define service YSD_ManageDelivery {
+  expose YC_DELIVERYHEADER_TP as DelHead;
+  expose YC_DELIVERYLINE      as DelLine;
+}

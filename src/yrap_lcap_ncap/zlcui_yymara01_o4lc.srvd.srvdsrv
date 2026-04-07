@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZLCC_YYMARA01LC'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZLCC_YYMARA01LC'
+  }
+}
+define service ZLCUI_YYMARA01_O4LC provider contracts odata_v4_ui {
+  expose ZLCC_YYMARA01LC as MATMAS;
+}

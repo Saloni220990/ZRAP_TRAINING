@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Manage PO'
+define service YSD_MANAGEPO {
+  expose YC_POH as poheader;
+  expose YC_POI as poitem;
+}
